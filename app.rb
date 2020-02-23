@@ -7,7 +7,7 @@ def view(template); erb template.to_sym; end
 before { puts "Parameters: #{params}" }                                     
 
 #enter your Dark Sky API key here
-#ForecastIO.api_key = "0798299ae02b2b089bd1afa7a16ba7c2"
+ForecastIO.api_key = "0798299ae02b2b089bd1afa7a16ba7c2"
 
 #get "/" do
    #view "location"
@@ -29,4 +29,6 @@ before { puts "Parameters: #{params}" }
 #end
     url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=4ea424f6ab854fe0be46492d7ac3f5cc"
     news = HTTParty.get(url).parsed_response.to_hash
-    pp news
+    #pp news
+    @story1 = news["articles"][0]["title"]
+    puts @story1
