@@ -23,7 +23,19 @@
   <body>
 
     <div class="container mt-5">
-      <h1>News</h1>
+      <h1>Weather</h1>
+      <p>
+        <%="Current temperature: #{@current_temp} degrees."%>
+     </p>
+     <p>
+      <h3>Forecast for the Week</h3>
+        <u1>
+            <%for daily_forecast in @forecast["daily"]["data"]%>
+                <li><%="A high temperature of #{daily_forecast["temperatureHigh"]}. #{daily_forecast["summary"]}"%></li>
+            <%end%>
+        </u1>
+      </p>
+    </p>
     </div>
 
     <!-- Optional JavaScript -->
