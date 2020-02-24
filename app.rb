@@ -40,6 +40,15 @@ get "/news" do
     @story7img = news["articles"][6]["urlToImage"]
     @story8img = news["articles"][7]["urlToImage"]
     @story9img = news["articles"][8]["urlToImage"]
+    @story1url = news["articles"][0]["url"]
+    @story2url = news["articles"][1]["url"]
+    @story3url = news["articles"][2]["url"]
+    @story4url = news["articles"][3]["url"]
+    @story5url = news["articles"][4]["url"]
+    @story6url = news["articles"][5]["url"]
+    @story7url = news["articles"][6]["url"]
+    @story8url = news["articles"][7]["url"]
+    @story9url = news["articles"][8]["url"]
     view "ask"
 end
    
