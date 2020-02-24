@@ -13,5 +13,13 @@
 .text-light{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -0.5px -0.5px 0 rgb(32, 32, 32), 0.5px -0.5px 0 rgb(32, 32, 32), -0.5px 0.5px 0 rgb(32, 32, 32), 0.5px 0.5px 0 rgb(32, 32, 32);
+}
+
+.card-header{
+    font-size: 20pt;
+}
+
+.h5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

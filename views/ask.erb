@@ -23,22 +23,35 @@
   <body>
 
 <div class="container mt-5">
+
+    <div class="row">
     <h1>Weather</h1>
+    <i class="fas fa-cloud-sun-rain"></i>
+
+    </div>
 
   <div class="row">
     <div class="col-sm-4"><h4><%="It is currently #{@current_temp} degrees Fahrenheit."%></h4></div>
-    <div class="col-sm-8"><h4>Forecast for the Week:</h4>
-                <u1>
+    <div class="col-sm-8">
+        <div class="card text-white bg-info mb-3"</div>
+        <div class="card-header">Forecast for the Week</div>
+        <div class="card-body">
+        <p class="card-text"><u1>
                     <%for @daily_forecast in @forecast["daily"]["data"]%>
                         <li><%="#{Time.at(@daily_forecast["time"]).strftime("%a")}: A high temperature of #{@daily_forecast["temperatureHigh"]}. #{@daily_forecast["summary"]}"%></li>
                     <%end%>
                 </u1>
+                </p>
+            </div>
+        </div>
     </div>
-</div>
     
 <div class="container mt-5">
 
-<h1>News</h1>
+    <div class="row">
+    <h1>News</h1>
+    <i class="far fa-newspaper"></i>
+    </div>
 
 <p>
     <div class="card-deck">
