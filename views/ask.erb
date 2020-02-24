@@ -26,8 +26,8 @@
     <h1>Weather</h1>
 
   <div class="row">
-    <div class="col-sm-4"><h3><%="Current temperature: #{@current_temp} degrees."%></h3></div>
-    <div class="col-sm-8"><h3>Forecast for the Week:</h3>
+    <div class="col-sm-4"><h4><%="It is currently #{@current_temp} degrees Fahrenheit."%></h4></div>
+    <div class="col-sm-8"><h4>Forecast for the Week:</h4>
                 <u1>
                     <%for @daily_forecast in @forecast["daily"]["data"]%>
                         <li><%="#{Time.at(@daily_forecast["time"]).strftime("%a")}: A high temperature of #{@daily_forecast["temperatureHigh"]}. #{@daily_forecast["summary"]}"%></li>
