@@ -22,15 +22,24 @@ get "/news" do
     @current_temp = @forecast["currently"]["temperature"]
     url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=4ea424f6ab854fe0be46492d7ac3f5cc"
     news = HTTParty.get(url).parsed_response.to_hash
-    @story1 = news["articles"][0]["title"]
-    @story2 = news["articles"][1]["title"]
-    @story3 = news["articles"][2]["title"]
-    @story4 = news["articles"][3]["title"]
-    @story5 = news["articles"][4]["title"]
-    @story6 = news["articles"][5]["title"]
-    @story7 = news["articles"][6]["title"]
-    @story8 = news["articles"][7]["title"]
-    @story9 = news["articles"][7]["title"]
+    @story1title = news["articles"][0]["title"]
+    @story2title = news["articles"][1]["title"]
+    @story3title = news["articles"][2]["title"]
+    @story4title = news["articles"][3]["title"]
+    @story5title = news["articles"][4]["title"]
+    @story6title = news["articles"][5]["title"]
+    @story7title = news["articles"][6]["title"]
+    @story8title = news["articles"][7]["title"]
+    @story9title = news["articles"][8]["title"]
+    @story1img = news["articles"][0]["urlToImage"]
+    @story2img = news["articles"][1]["urlToImage"]
+    @story3img = news["articles"][2]["urlToImage"]
+    @story4img = news["articles"][3]["urlToImage"]
+    @story5img = news["articles"][4]["urlToImage"]
+    @story6img = news["articles"][5]["urlToImage"]
+    @story7img = news["articles"][6]["urlToImage"]
+    @story8img = news["articles"][7]["urlToImage"]
+    @story9img = news["articles"][8]["urlToImage"]
     view "ask"
 end
    
