@@ -20,10 +20,17 @@ get "/news" do
     long = "#{latlong[1]}"
     @forecast = ForecastIO.forecast("#{lat}","#{long}").to_hash
     @current_temp = @forecast["currently"]["temperature"]
+    url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=4ea424f6ab854fe0be46492d7ac3f5cc"
+    news = HTTParty.get(url).parsed_response.to_hash
+    @story1 = news["articles"][0]["title"]
+    @story2 = news["articles"][1]["title"]
+    @story3 = news["articles"][2]["title"]
+    @story4 = news["articles"][3]["title"]
+    @story5 = news["articles"][4]["title"]
+    @story6 = news["articles"][5]["title"]
+    @story7 = news["articles"][6]["title"]
+    @story8 = news["articles"][7]["title"]
+    @story9 = news["articles"][7]["title"]
     view "ask"
 end
-   # url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=4ea424f6ab854fe0be46492d7ac3f5cc"
-    #news = HTTParty.get(url).parsed_response.to_hash
-    #pp news
-    #@story1 = news["articles"][0]["title"]
    
